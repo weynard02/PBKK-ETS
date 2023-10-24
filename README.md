@@ -25,3 +25,5 @@ Note: pastikan sudah `php artisan storage:link`
 ![Screenshot (1048)](https://github.com/weynard02/PBKK-ETS/assets/90879937/858cde6b-4408-4751-96cf-29ad105d55e1)
 
 ![Screenshot (1049)](https://github.com/weynard02/PBKK-ETS/assets/90879937/d96e1d61-c56b-4a43-830e-815c89db4869)
+
+![image](https://github.com/weynard02/PBKK-ETS/assets/90879937/9d617e3b-3ddb-4956-ba19-69ce60121bb5)
