@@ -12,6 +12,7 @@ Note: pastikan sudah `php artisan storage:link`
 
 ![Screenshot (1042)](https://github.com/weynard02/PBKK-ETS/assets/90879937/4d0efc99-bcae-4189-b884-9578b9e6d74f)
 
+Note: Jika seeder dijalankan, muncul barang-barang dengan gambar mystery box 
 ![Screenshot (1043)](https://github.com/weynard02/PBKK-ETS/assets/90879937/e2c0ade7-6afe-4008-a815-291cc054ebd0)
 
 ![Screenshot (1044)](https://github.com/weynard02/PBKK-ETS/assets/90879937/fb69a250-38ec-41a3-978d-1e36f0c7f6b3)
