@@ -1,0 +1,38 @@
+<?php
+
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::get('/barang', [BarangController::class, 'index'])->middleware(['auth', 'verified'])->name('barang');
+Route::get('/create', [BarangController::class, 'create'])->middleware(['auth', 'verified'])->name('create');
+Route::post('/create', [BarangController::class, 'store'])->middleware(['auth', 'verified']);
+Route::get('/edit/{id}', [BarangController::class, 'edit'])->middleware(['auth', 'verified']);
+Route::put('/edit/{id}', [BarangController::class, 'update'])->middleware(['auth', 'verified']);
+Route::delete('/delete/{id}', [BarangController::class, 'destroy'])->middleware(['auth', 'verified']);
+require __DIR__.'/auth.php';
